@@ -56,17 +56,29 @@ The project demonstrates a lightweight debugging mechanism for handling log deli
 ## Console Output Example
 ```
 === NEW FIREHOSE PAYLOAD RECEIVED ===
-Timestamp: 2025-05-02T10:00:00Z
+Timestamp: 2025-05-02T08:32:39.987Z
 Request Details:
-  Request ID: abc123
-  Timestamp: 1625097600000
+  Request ID: ff15de52-7605-44f6-91d8-442f91fed4f4
   Total Records: 1
 
 --- Processing Record 1 ---
-Raw Decoded Data: {...}
-Parsed JSON Data: {
-  "key": "value",
-  ...
+Raw Decoded Data:
+{
+  "messageType": "DATA_MESSAGE",
+  "logGroup": "FunctionLogsToFirehose",
+  "logStream": "2025/05/02/FunctionLogsToFirehose[$LATEST]...",
+  "subscriptionFilters": ["lambda-logs-delivery"],
+  "logEvents": [
+    {
+      "timestamp": 1746174748254,
+      "message": "INIT_START Runtime Version: nodejs:22.v35..."
+    },
+    {
+      "timestamp": 1746174748398,
+      "message": "2025-05-02T08:32:28.398Z\tINFO\tHello World"
+    },
+    ...
+  ]
 }
 
 === PAYLOAD PROCESSING COMPLETE ===
