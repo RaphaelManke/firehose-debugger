@@ -6,6 +6,14 @@ This is a simple Express-based TypeScript server that helps debug AWS Firehose H
 - Decoding base64 encoded records
 - Printing payload details to console with enhanced visualization
 
+## Context and Inspiration
+This Proof of Concept (PoC) is directly related to the AWS announcement described in the blog post: [AWS Lambda Introduces Tiered Pricing for Amazon CloudWatch Logs and Additional Logging Destinations](https://aws.amazon.com/blogs/compute/aws-lambda-introduces-tiered-pricing-for-amazon-cloudwatch-logs-and-additional-logging-destinations/)
+
+The project demonstrates a lightweight debugging mechanism for handling log delivery payloads, particularly focusing on:
+- Decoding compressed log records
+- Handling CloudWatch log exports
+- Providing a flexible endpoint for log stream debugging
+
 ## Prerequisites
 - Node.js
 - npm
